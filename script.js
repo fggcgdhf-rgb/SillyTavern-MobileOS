@@ -89,3 +89,15 @@ function updateClock() {
 }
 
 jQuery(document).ready(initPhone);
+// ระบบบันทึกความจำส่งไปให้ AI
+function updateAIKnowledge(newInfo) {
+    const currentNotes = extension_settings[MODULE_NAME]?.notes || "";
+    const updatedNotes = currentNotes + "\n" + newInfo;
+    
+    // บันทึกข้อมูลลงใน Extension Settings ของ SillyTavern
+    extension_settings[MODULE_NAME].notes = updatedNotes;
+    saveSettings();
+    
+    // แจ้งเตือนผู้ใช้
+    toastr.success("บันทึกความจำลงในระบบสมอง AI แล้ว");
+}
