@@ -1,0 +1,6 @@
+{
+    "name": "Ultimate Mobile OS",
+    "display_name": "📱 Ultimate Phone",
+    "description": "Simulated Mobile OS for Character Interaction",
+    "main": "script.js"
+}
